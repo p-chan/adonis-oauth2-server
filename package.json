@@ -14,6 +14,9 @@
     "url": "https://github.com/p-chan/adonis-oauth2-server.git"
   },
   "scripts": {
+    "fmt": "prettier-eslint --write \"./**/*.js\" --ignore \"./node_modules/**\"",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
     "start": "node server.js",
     "test": "node ace test"
   },
@@ -27,10 +30,28 @@
     "@adonisjs/ignitor": "^2.0.6",
     "@adonisjs/lucid": "^5.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.5",
+    "prettier": "^1.12.1",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1"
+  },
   "private": true,
   "adonis-version": "4.1.0",
   "autoload": {
     "App": "./app"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run fmt",
+      "git add"
+    ]
   }
 }
