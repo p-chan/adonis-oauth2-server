@@ -6,7 +6,7 @@
     "adonisjs",
     "adonis-app"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "P-Chan <hello@0x50.io>",
   "main": "index.js",
   "repository": {
