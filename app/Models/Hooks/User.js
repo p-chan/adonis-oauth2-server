@@ -2,7 +2,7 @@
 
 const Hash = use('Hash')
 
-const UserHook = module.exports = {}
+const UserHook = (module.exports = {})
 
 /**
  * Hash using password as a hook.
