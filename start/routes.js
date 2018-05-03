@@ -15,6 +15,6 @@
 
 const Route = use('Route')
 
-Route.get('/', ({ request }) => {
-  return { greeting: 'Hello world in JSON' }
-})
+Route.group(() => {
+  Route.post('oauth2/token', 'TokenController.create')
+}).prefix('v1')
