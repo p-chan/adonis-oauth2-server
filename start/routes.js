@@ -17,4 +17,5 @@ const Route = use('Route')
 
 Route.group(() => {
   Route.post('oauth2/token', 'TokenController.create')
+  Route.post('users', 'UserController.create')
 }).prefix('v1')
