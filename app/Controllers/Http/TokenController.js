@@ -54,6 +54,16 @@ class TokenController {
       })
     }
   }
+
+  async show ({ auth, request, response }) {
+    try {
+      return response.send(await auth.getUser())
+    } catch (e) {
+      return response.send({
+        error: 'fuck'
+      })
+    }
+  }
 }
 
 module.exports = TokenController
